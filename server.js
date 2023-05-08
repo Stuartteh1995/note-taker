@@ -1,9 +1,9 @@
-
+//creating const for npm being used
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-
+//creating to connection to server
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -33,6 +33,7 @@ app.post('/api/notes', (req, res) => {
   const newNote = req.body;
   newNote.id = uuidv4();
 
+//creating a new note and saves notes
   fs.readFile('db/db.json', 'utf8', (err, data) => {
     if (err) throw err;
     const notes = JSON.parse(data);
@@ -45,6 +46,7 @@ app.post('/api/notes', (req, res) => {
   });
 });
 
+//delete notes
 app.delete('/api/notes/:id', (req, res) => {
   const noteId = req.params.id;
 
