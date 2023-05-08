@@ -12,3 +12,6 @@ HOW TO USE
 7) users can now start taking notes and saving them by clicking on the save button.
 8) users can also decided to delete their notes. 
 9) users can easily switch bewteen notes.  
+
+Heroku live link :https://note-taker-stuart.herokuapp.com/
+github: https://github.com/Stuartteh1995/note-taker

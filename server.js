@@ -29,6 +29,7 @@ app.get('/api/notes', (req, res) => {
   });
 });
 
+//creates a unique id fro each note
 app.post('/api/notes', (req, res) => {
   const newNote = req.body;
   newNote.id = uuidv4();
